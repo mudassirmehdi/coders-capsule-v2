@@ -1,0 +1,65 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;1,400;1,500&family=Crimson+Text:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'gilroylight';
+    src: url('../fonts/gilroy-light-webfont.woff2') format('woff2'),
+        url('../fonts/gilroy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('../fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+        url('../fonts/gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'made_tommy_softmedium';
+    src: url('../fonts/made_tommy_soft_medium_personal_use-webfont.woff2') format('woff2'),
+        url('../fonts/made_tommy_soft_medium_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-family-base: 'Quicksand', sans-serif;
+$font-family-secondary: 'gilroyextrabold';
+$headings-font-family: 'made_tommy_softmedium';
+
+
+
+// Colors
+$body-color: #ffffff;
+$brand-primary: #4285F4;
+$brand-secondary: $brand-primary;
+$btn-hover: lighten($brand-primary, 5);
+$link-color: $brand-primary;
+$link-hover: darken($brand-primary, 20);
+$fill-grey-light: #f4f4f4;
+$fill-grey-v2: #555555;
+
+$fill-black-v1: #2c2927;
+
+/* Font Weights for Google Fonts */
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fw-black: 900;
+
+:root {
+    --primary-color: #{$brand-primary};
+    --light-color: #ECF3FE;
+    /* Adjust the percentage for the lightness */
+}
+
+.btn-primary {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    &:active{
+        color: inherit !important;
+    }
+}

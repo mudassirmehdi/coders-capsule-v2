@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include global-font;
+}
+
+a {
+    @include transition-standard;
+    color: $brand-primary;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $brand-secondary;
+    }
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: $fw-bold;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading;
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+h4 {
+    @include h4;
+}
+
+h5 {
+    @include h5;
+}
+
+h6 {
+    @include h6;
+}
+
+.primaryBtn {
+    @include primaryBtn;
+}
+
+.icon-btn {
+    @include primaryBtn(icon)
+}
+
+.cta__link {
+    @include cta_link();
+}
+
+.cta__link--v2 {
+    @include cta_link($body-color,'v2');
+}
+
+.cta__link--v2__light {
+    @include cta_link(white,'v2');
+}
+
+.play__btn {
+    @include play_btn();
+}
+
+.description {
+    color: $fill-grey-v2;
+    letter-spacing: 1.5px;
+}
+
+.description__md {
+    @include font-format(16px, 21px);
+    font-weight: $fw-regular;
+
+    @include media-breakpoint-up(lg){
+        @include font-format(18px, 23px);
+    }
+
+    @include media-breakpoint-up('3xl'){
+        @include font-format(27px, 32px);
+    }
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin:  0 auto;
+    padding: 0 15px;
+
+    @include media-breakpoint-up(sm) {
+        max-width: 570px;
+    }
+
+    @include media-breakpoint-up(md) {
+        max-width: 750px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-width: 990px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: 1170px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        max-width: 1366px;
+    }
+
+    @include media-breakpoint-up('3xl') {
+        max-width: 1470px;
+    }
+
+    @include media-breakpoint-up('4xl') {
+        max-width: 1667px;
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
